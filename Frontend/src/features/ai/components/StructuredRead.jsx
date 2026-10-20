@@ -1,5 +1,5 @@
 import "../styles/_structured-read.scss";
-import StructuredOutput from "./Structuredoutput";
+import StructuredOutput from "./StructuredOutput";
 
 function StructuredRead({ result }) {
   return (

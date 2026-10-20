@@ -1,5 +1,4 @@
 import "../styles/_hero.scss";
-import React, { use } from "react";
 import CompilePreview from "./CompilePreview";
 
 function Hero() {

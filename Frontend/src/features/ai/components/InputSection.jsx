@@ -1,7 +1,7 @@
 import "../styles/_input-section.scss";
 import ResumeUploader from "./ResumeUploader";
 import GenerateButton from "./GenerateButton";
-import TextAreaField from "./Textareafield";
+import TextAreaField from "./TextAreaField";
 
 function InputSection({
   resumeFile,
