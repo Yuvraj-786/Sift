@@ -1,0 +1,114 @@
+@use "../../../styles/token.scss" as *;
+
+.interview-qa {
+  max-width: 1056px;
+  margin: 72px auto;
+  padding: 0 24px;
+}
+
+.interview-qa__form {
+  display: grid;
+  gap: 10px;
+  max-width: 780px;
+}
+
+.interview-qa__form label {
+  color: $pine;
+  font-size: 12px;
+}
+
+.interview-qa__form textarea {
+  min-height: 116px;
+  resize: vertical;
+  border: 1px solid $border;
+  border-radius: 6px;
+  padding: 14px;
+  background: $paper-raised;
+  color: $ink;
+  font: inherit;
+  line-height: 1.6;
+}
+
+.interview-qa__form textarea:focus-visible {
+  outline: 2px solid $pine;
+  outline-offset: 2px;
+}
+
+.interview-qa__actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: $ink-soft;
+  font-size: 12px;
+}
+
+.interview-qa__actions button,
+.interview-qa__error button {
+  border: 0;
+  border-radius: 6px;
+  background: $ink;
+  color: $highlight;
+  padding: 10px 18px;
+  cursor: pointer;
+  font: inherit;
+}
+
+.interview-qa__actions button:disabled,
+.interview-qa__error button:disabled {
+  opacity: 0.5;
+  cursor: wait;
+}
+
+.interview-qa__error {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 14px;
+  color: #a33a2c;
+}
+
+.interview-qa__answer {
+  max-width: 900px;
+  margin-top: 28px;
+  line-height: 1.7;
+}
+
+.interview-qa__answer h3,
+.interview-qa__source h4 {
+  margin: 0 0 8px;
+  font-family: "Fraunces", serif;
+}
+
+.interview-qa__sources {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr));
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.interview-qa__source {
+  border: 1px solid $border;
+  border-radius: 6px;
+  padding: 16px;
+  background: $paper-raised;
+  font-size: 13px;
+}
+
+.interview-qa__source p {
+  margin: 8px 0 0;
+}
+
+.interview-qa__heading {
+  color: $pine;
+}
+
+@media (max-width: 600px) {
+  .interview-qa {
+    padding: 0 18px;
+  }
+
+  .interview-qa__error {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

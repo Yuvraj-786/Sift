@@ -1,0 +1,59 @@
+@use "../../../styles/token.scss" as *;
+
+.resume-uploader {
+  &__dropzone {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    gap: 8px;
+    text-align: center;
+    padding: 20px;
+    border: 1.5px dashed $border;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: border-color 0.15s ease, background 0.15s ease;
+
+    &:hover,
+    &.is-dragging {
+      border-color: $pine;
+      background: rgba($pine, 0.03);
+    }
+
+    input {
+      display: none;
+    }
+  }
+
+  &__main {
+    font-size: 13px;
+    color: $ink;
+  }
+
+  &__sub {
+    font-size: 12px;
+    color: $ink-soft;
+  }
+
+  &__chip {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: $paper;
+    border: 1px solid $border;
+    border-radius: 8px;
+    padding: 10px 12px;
+    font-size: 12px;
+    margin-top: 10px;
+
+    button {
+      background: none;
+      border: none;
+      color: $ink-soft;
+      cursor: pointer;
+      font-size: 14px;
+    }
+  }
+}

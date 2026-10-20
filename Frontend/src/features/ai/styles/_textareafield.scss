@@ -1,0 +1,38 @@
+@use "../../../styles/token.scss" as *;
+
+// Same textarea look used in both the "About you" and "Job description" cards
+
+.text-area-field {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.text-area-field textarea {
+  flex: 1;
+  resize: none;
+  border: 1.5px solid $border;
+  border-radius: 10px;
+  padding: 14px;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 13px;
+  color: $ink;
+  background: $paper;
+  outline: none;
+  transition: border-color 0.15s ease;
+}
+
+.text-area-field textarea::placeholder {
+  color: #9ba096;
+}
+
+.text-area-field textarea:focus {
+  border-color: $pine;
+}
+
+.text-area-field__count {
+  font-size: 11px;
+  color: $ink-soft;
+  text-align: right;
+  margin-top: 6px;
+}

@@ -1,0 +1,107 @@
+@use "../../styles/token.scss" as *;
+
+// Shared styles for Login.jsx and Register.jsx.
+// Both pages use these same class names, so one file styles both: .auth-card, .auth-header, .auth-field, .auth-submit, .auth-footer
+
+
+.auth-card {
+  width: 100%;
+  max-width: 380px;
+  background: $paper-raised;
+  border: 1px solid $border;
+  border-radius: $radius-card;
+  padding: 36px 32px;
+}
+
+.auth-header {
+  margin-bottom: 28px;
+}
+
+.auth-header h2 {
+  font-family: "Fraunces", serif;
+  font-weight: 500;
+  font-size: 26px;
+  color: $ink;
+  margin-bottom: 8px;
+}
+
+.auth-header p {
+  font-size: 13px;
+  color: $ink-soft;
+}
+
+.auth-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 18px;
+}
+
+.auth-field label {
+  font-size: 12px;
+  color: $pine;
+}
+
+.auth-field input {
+  width: 100%;
+  border: 1.5px solid $border;
+  border-radius: 8px;
+  padding: 11px 12px;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 13px;
+  color: $ink;
+  background: $paper;
+  outline: none;
+  transition: border-color 0.15s ease;
+}
+
+.auth-field input::placeholder {
+  color: #9ba096;
+}
+
+.auth-field input:focus {
+  border-color: $pine;
+}
+
+.auth-submit {
+  width: 100%;
+  background: $ink;
+  color: $highlight;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  padding: 13px;
+  margin-top: 6px;
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+
+.auth-submit:hover {
+  transform: translateY(-1px);
+}
+
+.auth-submit:focus-visible {
+  outline: 2px solid $pine;
+  outline-offset: 3px;
+}
+
+.auth-footer {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 12px;
+  color: $ink-soft;
+}
+
+.auth-footer a {
+  color: $pine;
+  text-decoration: underline;
+}
+
+.auth-error {
+  margin: 0 0 16px;
+  color: #a33a2c;
+  font-size: 12px;
+  line-height: 1.5;
+}

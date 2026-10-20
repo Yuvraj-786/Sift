@@ -1,0 +1,12 @@
+@use "../../../styles/token.scss" as *;
+
+// ---- footer ----
+ 
+.home-footer {
+  padding: 40px 0 60px;
+  color: $ink-soft;
+  font-size: 12px;
+  border-top: 1px solid $border;
+  margin-top: 40px;
+}
+ 

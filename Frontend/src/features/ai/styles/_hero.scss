@@ -1,0 +1,74 @@
+@use "../../../styles/token.scss" as *;
+
+.home-wrap {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+// ---- hero ----
+ 
+.hero {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 56px;
+  align-items: center;
+  padding: 40px 0 88px;
+}
+ 
+.hero h1 {
+  font-family: "Fraunces", serif;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  font-size: 52px;
+  line-height: 1.08;
+  max-width: 15ch;
+  margin: 0;
+}
+ 
+.hero p {
+  margin: 24px 0 32px;
+  color: $ink-soft;
+  font-size: 15px;
+  max-width: 46ch;
+  line-height: 1.75;
+}
+ 
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: $highlight;
+  color: $highlight-ink;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  padding: 14px 22px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+ 
+.btn-primary:hover {
+  transform: translateY(-1px);
+}
+ 
+.btn-primary:focus-visible {
+  outline: 2px solid $pine;
+  outline-offset: 3px;
+}
+
+// ---- responsive ----
+ 
+@media (max-width: 860px) {
+  .hero {
+    grid-template-columns: 1fr;
+  }
+  .cards {
+    grid-template-columns: 1fr;
+  }
+  .hero h1 {
+    font-size: 38px;
+  }
+}

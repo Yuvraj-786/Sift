@@ -1,0 +1,76 @@
+@use "../../../styles/token.scss" as *;
+
+.output-card {
+  background: $paper-raised;
+  border: 1px solid $border;
+  border-radius: $radius-card;
+  padding: 30px 34px;
+  animation: rise 0.5s ease;
+}
+
+.output-card__title {
+  font-family: "Fraunces", serif;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.output-card__field {
+  padding: 16px 0;
+  border-top: 1px solid $border;
+}
+
+.output-card__field:first-of-type {
+  border-top: none;
+  padding-top: 0;
+}
+
+.output-card__field .k {
+  font-size: 11px;
+  color: $pine;
+  margin-bottom: 6px;
+}
+
+.output-card__field .v {
+  font-size: 14px;
+  line-height: 1.7;
+  color: $ink;
+  font-family: "IBM Plex Mono", monospace;
+}
+
+.tag {
+  display: inline-block;
+  background: rgba(255, 201, 77, 0.35);
+  color: $highlight-ink;
+  font-size: 12px;
+  padding: 3px 9px;
+  border-radius: 6px;
+  margin: 3px 6px 3px 0;
+}
+
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.output-card__item {
+  padding: 12px 0;
+  border-top: 1px solid $border;
+  color: $ink;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.output-card__item p {
+  margin: 6px 0 0;
+}
+
+.output-card__item ul {
+  margin: 8px 0 0;
+  padding-left: 20px;
+}

@@ -1,0 +1,54 @@
+@use "../../../styles/token.scss" as *;
+// ---- nav ----
+ 
+.home-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 28px 32px;
+  max-width: 1120px;
+  margin: 0 auto;
+}
+ 
+.home-nav__logo {
+  font-family: "Fraunces", serif;
+  font-size: 22px;
+  font-weight: 600;
+}
+ 
+.home-nav__logo span {
+  color: $pine;
+}
+ 
+.home-nav__cta {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 13px;
+  color: $ink;
+  text-decoration: none;
+  border-bottom: 1px solid $ink;
+  padding-bottom: 2px;
+  transition: opacity 0.15s ease;
+}
+ 
+.home-nav__cta:hover {
+  opacity: 0.6;
+}
+
+.home-nav__links {
+  display: flex;
+  gap: 22px;
+}
+
+@media (max-width: 520px) {
+  .home-nav {
+    padding: 22px 18px;
+  }
+
+  .home-nav__links {
+    gap: 14px;
+  }
+
+  .home-nav__cta {
+    font-size: 11px;
+  }
+}

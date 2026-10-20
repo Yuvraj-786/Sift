@@ -1,0 +1,78 @@
+@use "../../../styles/token.scss" as *;
+
+.compile-card {
+  background: $ink;
+  border-radius: $radius-card;
+  padding: 24px 26px;
+  color: #eaede6;
+  font-size: 13px;
+  box-shadow: 0 24px 48px -24px rgba(23, 27, 24, 0.35);
+}
+
+.compile-card__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: $pine-soft;
+  font-size: 12px;
+  margin-bottom: 18px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.compile-card__dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: $highlight;
+  display: inline-block;
+  margin-right: 8px;
+  animation: pulse 1.6s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.35;
+  }
+}
+
+.compile-card__row {
+  display: grid;
+  grid-template-columns: 88px 1fr;
+  gap: 12px;
+  padding: 9px 0;
+  opacity: 0;
+  transform: translateY(4px);
+  animation: rise 0.5s ease forwards;
+}
+
+.compile-card__row .k {
+  color: $pine-soft;
+}
+
+.compile-card__row .v {
+  color: #eaede6;
+}
+
+.compile-card__row .v.hl {
+  color: $highlight;
+}
+
+@keyframes rise {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .compile-card__dot,
+  .compile-card__row {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}

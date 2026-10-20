@@ -1,0 +1,13 @@
+@use "../../../styles/token.scss" as *;
+// ---- structured read ----
+// ---- output placeholder ----
+ 
+.placeholder-note {
+  background: $paper-raised;
+  border: 1px solid $border;
+  border-radius: $radius-card;
+  padding: 30px 34px;
+  color: $ink-soft;
+  font-size: 13px;
+  text-align: center;
+}
